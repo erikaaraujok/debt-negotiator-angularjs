@@ -1,0 +1,98 @@
+:root {
+    --primary-color: #002147; 
+    --secondary-color: #0099FF; 
+    --accent-color: #E5E5E5; 
+    --dark-color: #111; 
+    --white-color: #fff;
+    --gold-color: #FFD700; 
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: var(--primary-color);
+    padding: 20px;
+}
+
+header img {
+    width: 180px;
+}
+
+main {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.card {
+    background: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 75%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px; 
+    border: none;
+    border-radius: 20px;
+    background: var(--accent-color);
+    color: var(--dark-color);
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+input:focus {
+    border: 2px solid var(--gold-color);
+}
+
+.btn {
+    width: 90%; 
+    background: linear-gradient(90deg, var(--gold-color), var(--accent-color));
+    color: var(--dark-color);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, var(--accent-color), var(--gold-color));
+    color: var(--dark-color);
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, var(--accent-color), var(--gold-color));
+    color: var(--dark-color);
+}
+
+.result-box {
+    background: var(--dark-color);
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

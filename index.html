@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="DebtApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negociador de Dividas</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+    <script src="services.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="DebtController">
+
+    <header>
+        <img src="peak-logo1.png" alt="Peak Investimentos">
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Calcule aqui seu debito</h2>
+            <label>Quantidade de Parcelas:</label>
+            <input type="number" ng-model="debtRequest.installments" placeholder="Enter number of installments">
+            
+            <label>Valor:</label>
+            <input type="number" ng-model="debtRequest.installmentValue" placeholder="Enter installment value">
+            
+            <button class="btn" ng-click="calculateDebt()">Calculate</button>
+
+            <div ng-if="debtResult" class="result-box">
+                <h3>Debt Calculation Result</h3>
+                <p><strong>Installment Value:</strong> {{debtResult.installmentValue | currency}}</p>
+                <p><strong>Total Debt:</strong> {{debtResult.totalDebt | currency}}</p>
+                <p><strong>Interest:</strong> {{debtResult.interest | currency}}</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Veja nossos Produtos Financeiros</h2>
+            <label>Digite o ID (1-3):</label>
+            <input type="number" ng-model="productId" placeholder="Enter product ID">
+            <button class="btn" ng-click="getFinancialProduct()">Search</button>
+
+            <div ng-if="productResult" class="result-box">
+                <h3>Financial Product Found</h3>
+                <p><strong>Product Name:</strong> {{productResult.productName}}</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
